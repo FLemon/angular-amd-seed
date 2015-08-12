@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// 导入bootstrap的`_variables`
+@import "./../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+
+// 在这里,我们已经拥有了所有bootstrap的变量,
+// 覆盖一个bootstrap变量`$gray-base`
+$gray-base:  #111;
+
+// 当然我们也可以定义myui自己的变量
+// --------------------------------
+$myui-gray-base: #222;
+

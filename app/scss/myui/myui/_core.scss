@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+// 在这里我们导入`var`和`mixin`两个文件
+// 方便其他组件直接引用
+@import "var";
+@import "mixin";

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// 导入myui `core`
+// 在这里我们已经拥有了所有`var`文件中的变量和`mixin`当中的方法
+@import "core";
+
+// 在这里定义自己的button组件
+// 或者覆盖bootstrap的组件
+.btn {
+}

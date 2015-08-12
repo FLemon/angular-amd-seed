@@ -1,9 +1,7 @@
 define([
-    "angular",
-    "angular.route",
-    "angular.resource",
-    "angular.cookies"
-], function( angular ) {
+    "require",
+    "angular"
+], function( require, angular ) {
 
 /*
  * 我们并未定义`angular.route`等为AMD格式的模块
@@ -26,10 +24,16 @@ define([
  */
 
 // 导出我们的`./core/core`模块
-return angular.module("core", [
-    "ngRoute",
-    "ngResource",
-    "ngCookies"
-])
+return require([
+    "angular.route",
+    "angular.resource",
+    "angular.cookies"
+], function() {
+    return angular.module("core", [
+        "ngRoute",
+        "ngResource",
+        "ngCookies"
+    ])
+})
 
 })

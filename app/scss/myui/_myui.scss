@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// 导入bootstrap
+@import "./../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+// 这里是myui的组件
+// 在这里覆盖bootstrap的原生组件
+@import "myui/navbar";
+@import "myui/table";
+@import "myui/button";
+@import "myui/tooltip";
+@import "myui/modal";

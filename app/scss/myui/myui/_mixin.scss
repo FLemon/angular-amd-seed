@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// 导入bourbon
+// 所以我们可以使用所有的bourbon方法
+@import "./../../../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+// 定义myui的`square()`方法
+@mixin square($size: 0) {
+
+    // 在这里调用了bourbon中的`size()`方法
+    @include size($size);
+}
