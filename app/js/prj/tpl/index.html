@@ -1,0 +1,23 @@
+<project-list
+    template="ng__tpl-project-list.html"
+    projects="ctrl.projects">
+    <project-item
+        template="ng__tpl-project-item.html"
+        ng-repeat="project in projects">
+    </project-item>
+</project-list>
+
+<script type="text/ng-template" id="ng__tpl-project-list.html">
+<div class="container">
+    <div class="page-header">
+        <h1>total projects <strong>{{projects.length}}</strong></h1>
+    </div>
+    <div ng-transclude></div>
+</div>
+</script>
+
+<script type="text/ng-template" id="ng__tpl-project-item.html">
+<div>
+    <a ng-href="#/projects/{{project.id}}">{{project.title}}</a>
+</div>
+</script>
