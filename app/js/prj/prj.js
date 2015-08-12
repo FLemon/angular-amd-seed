@@ -16,27 +16,28 @@ define([
 ], function( angular, router, boot, index, show, foobar, foo, bar, baz, qux, list, item, prj, hello ) {
 
 
+// 导出`./prj`模块
 return angular.module( "project", [] )
-    .config( router ) // 这里可能需要控制器已经生产出来之后才有效
+    .config( router )
     .run( boot )
 
-    // ctrls
+    // 控制器
     .controller( "index", index )
     .controller( "show", show )
 
-    // servs
+    // 服务
     .constant( "foobar", foobar )
     .value( "foo", foo )
     .service( "bar", bar )
     .factory( "baz", baz )
     .provider( "qux", qux )
 
-    // dirs
+    // 指令
     .directive( "projectList", list )
     .directive( "projectItem", item )
     .directive( "projectPage", prj )
 
-    // fltrs
+    // 过滤器
     .filter( "hello", hello )
 
 })
