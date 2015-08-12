@@ -11,14 +11,12 @@ var app = angular.module("app", [
     "project"
 ])
 
-// 配置我们的`./app`模块
 app.config(function( $routeProvider ) {
     $routeProvider.otherwise({
         redirectTo: '/projects'
     })
 })
 
-// 导出`./app`模块
 return app
 
 })

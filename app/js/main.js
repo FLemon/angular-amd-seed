@@ -10,15 +10,11 @@ require.config({
     },
 
     shim: {
-
-        // 由于angular不是通过AMD`define()`定义的模块
-        // 所以手动把它转换为AMD支持的形式
         "angular": {
             exports: "angular"
         }
     },
 
-    // 引入启动应用的模块`./bootstrap`
     deps: ["./bootstrap"]
 })
 
