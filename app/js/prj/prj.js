@@ -11,28 +11,36 @@ define([
     "./serv/qux",
     "./dir/list",
     "./dir/item",
-    "./dir/prj",
+    "./dir/detail",
     "./fltr/hello"
-], function( angular, router, boot, index, show, foobar, foo, bar, baz, qux, list, item, prj, hello ) {
+], function( angular, router, boot, index, show, foobar, foo, bar, baz, qux, list, item, detail, hello ) {
 
+var project = angular.module( "project", [] )
 
-return angular.module( "project", [] )
-    .config( router )
-    .run( boot )
+project
+.config( router )
+.run( boot )
 
-    .controller( "index", index )
-    .controller( "show", show )
+// 控制器
+.controller( "index", index )
+.controller( "show", show )
 
-    .constant( "foobar", foobar )
-    .value( "foo", foo )
-    .service( "bar", bar )
-    .factory( "baz", baz )
-    .provider( "qux", qux )
+// 服务
+.constant( "foobar", foobar )
+.value( "foo", foo )
+.service( "bar", bar )
+.factory( "baz", baz )
+.provider( "qux", qux )
 
-    .directive( "projectList", list )
-    .directive( "projectItem", item )
-    .directive( "projectPage", prj )
+// 指令
+.directive( "projectList", list )
+.directive( "projectItem", item )
+.directive( "projectPage", detail )
 
-    .filter( "hello", hello )
+// 过滤器
+.filter( "hello", hello )
+
+// 导出`./prj/prj`模块
+return project
 
 })

@@ -6,6 +6,7 @@ define([
 
 var ui
 
+// 定义module `ui`需要依赖`ui.bootstrap`
 return require(["ui.bootstrap"], function() {
     ui = angular.module("ui", [
         "ui.bootstrap"
